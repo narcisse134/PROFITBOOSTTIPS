@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Articles — Business Tips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1; --text-dark:#1f2937; --text-light:#6b7280; --bg:#f9fafb; --white:#fff; --radius:16px; --shadow:0 4px 6px rgba(0,0,0,0.08);
+        }
+        *{box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;margin:0;background:var(--bg);color:var(--text-dark)}
+        .container{width:90%;max-width:1100px;margin:0 auto;padding:40px 20px}
+        header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+        a.logo{font-weight:700;color:var(--text-dark);text-decoration:none}
+        nav a{color:var(--primary);text-decoration:none;font-weight:600;margin-left:12px}
+        .section-title{font-size:2rem;font-weight:700;margin-bottom:24px}
+        .articles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+        .article-card{background:var(--white);padding:20px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+        .article-card h3{margin:0 0 10px 0}
+        .article-card p{color:var(--text-light);flex-grow:1}
+        .read-more-btn{background:none;border:none;color:var(--primary);font-weight:600;cursor:pointer;padding:0}
+        .article-details{max-height:0;overflow:hidden;transition:max-height .4s ease;margin-top:12px;color:var(--text-light)}
+        .article-details.active{max-height:600px}
+        @media(max-width:768px){.articles-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a class="logo" href="index.html">Business Tips</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="stories.html">Money Tips</a>
+            </nav>
+        </header>
+
+        <h1 class="section-title">Latest Business Articles</h1>
+
+        <div class="articles-grid">
+            <div class="article-card">
+                <h3>How to Start a Small Business in 2025</h3>
+                <p>Discover the step-by-step process to launch your own successful small business in today's competitive market.</p>
+                <button class="read-more-btn">Read More</button>
+                <div class="article-details">
+                    <p>Starting a business in 2025 requires a solid digital presence from day one. Begin by identifying a niche market with genuine demand. Conduct thorough market research to understand your target audience and competitors. Create a detailed business plan outlining your goals, strategies, and financial projections.</p>
+                    <p>Secure funding through traditional loans, investors, or modern crowdfunding platforms. Register your business legally and set up proper accounting systems. Build a strong online presence with a professional website and active social media profiles. Focus on delivering exceptional value to your first customers to generate positive word-of-mouth.</p>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <h3>Top 5 Side Hustles That Actually Make Money</h3>
+                <p>Explore legitimate side hustles that can generate substantial extra income without requiring massive upfront investment.</p>
+                <button class="read-more-btn">Read More</button>
+                <div class="article-details">
+                    <p>1. Freelance Digital Marketing — Help businesses improve their online presence through SEO and content creation.</p>
+                    <p>2. E-commerce Reselling — Source products and sell them for profit on platforms like eBay, Amazon, or Etsy.</p>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <h3>How to Manage Your Money Like Successful Entrepreneurs</h3>
+                <p>Learn the financial habits and money management strategies that separate successful business owners from the rest.</p>
+                <button class="read-more-btn">Read More</button>
+                <div class="article-details">
+                    <p>Successful entrepreneurs treat personal and business finances with discipline and foresight. They maintain separate accounts for business and personal use, making it easier to track expenses and manage cash flow.</p>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <h3>Online Business Ideas You Can Start With No Money</h3>
+                <p>Discover legitimate online business opportunities that require minimal to zero startup capital but have significant income potential.</p>
+                <button class="read-more-btn">Read More</button>
+                <div class="article-details">
+                    <p>1. Freelance Writing — Offer content creation services to businesses and publications.</p>
+                    <p>2. Virtual Assistant Services — Provide administrative support to busy entrepreneurs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const details = this.nextElementSibling;
+                const isActive = details.classList.contains('active');
+                document.querySelectorAll('.article-details.active').forEach(d => {
+                    if (d !== details) d.classList.remove('active');
+                });
+                document.querySelectorAll('.read-more-btn.active').forEach(b => {
+                    if (b !== this) b.classList.remove('active');
+                });
+                details.classList.toggle('active');
+                this.classList.toggle('active');
+                this.textContent = isActive ? 'Read More' : 'Show Less';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Get Started — Business Tips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--primary:#6366f1;--text:#111827;--muted:#6b7280;--bg:#f8fafc;--white:#fff;--radius:12px;--shadow:0 6px 18px rgba(0,0,0,0.06)}
+        *{box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);margin:0}
+        .container{width:90%;max-width:900px;margin:48px auto;padding:20px}
+        header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+        a.logo{font-weight:700;color:var(--text);text-decoration:none}
+        nav a{color:var(--primary);text-decoration:none;font-weight:600;margin-left:12px}
+        .card{background:var(--white);padding:28px;border-radius:var(--radius);box-shadow:var(--shadow)}
+        h1{margin:0 0 12px 0;font-size:1.75rem}
+        p.lead{color:var(--muted);margin-bottom:18px}
+        .steps{display:grid;gap:12px}
+        .step{padding:12px;border-radius:10px;background:#fbfdff;border:1px solid #eef2ff}
+        .btn{display:inline-block;background:var(--primary);color:var(--white);padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:700;margin-top:16px}
+        @media(max-width:600px){.container{margin:20px auto}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a class="logo" href="index.html">Business Tips</a>
+            <nav>
+                <a href="articles.html">Articles</a>
+                <a href="stories.html">Money Tips</a>
+            </nav>
+        </header>
+
+        <main class="card">
+            <h1>Get Started Today</h1>
+            <p class="lead">Follow these simple steps to begin improving your business and finances right away.</p>
+
+            <div class="steps">
+                <div class="step"><strong>1. Pick one goal.</strong> Choose one business or financial goal to focus on this month.</div>
+                <div class="step"><strong>2. Create a small plan.</strong> Break the goal into 3–5 actionable tasks you can complete in the next 7 days.</div>
+                <div class="step"><strong>3. Track progress.</strong> Review results weekly and adjust tactics based on what works.</div>
+                <div class="step"><strong>4. Learn & scale.</strong> Use articles and stories on this site to refine your approach and grow sustainably.</div>
+            </div>
+
+            <a class="btn" href="index.html">Back to Home</a>
+        </main>
+    </div>
+</body>
+</html>

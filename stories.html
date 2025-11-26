@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stories — Business Tips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary:#6366f1; --text-dark:#111827; --text-light:#6b7280; --bg:#f8fafc; --white:#fff; --radius:12px; --shadow:0 6px 18px rgba(0,0,0,0.06);
+        }
+        body { font-family: 'Inter',sans-serif; background:var(--bg); color:var(--text-dark); margin:0; }
+        .container { width:90%; max-width:900px; margin:40px auto; }
+        header { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
+        a.logo { text-decoration:none; color:var(--text-dark); font-weight:700; }
+        .story { background:var(--white); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow); margin-bottom:18px; }
+        .story h3 { margin-bottom:8px; }
+        .story .meta { color:var(--text-light); font-size:0.9rem; margin-bottom:12px; }
+        .back { text-decoration:none; color:var(--primary); font-weight:600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a class="logo" href="index.html">Business Tips</a>
+            <nav><a class="back" href="index.html">← Back to Home</a></nav>
+        </header>
+
+        <article id="story-1" class="story">
+            <div class="meta">Founder Story • 6 min read</div>
+            <h3>From Side Hustle to 6-Figure Business</h3>
+            <p>When Maya started doing small marketing gigs on weekends she never imagined it would grow into a full agency. The turning point was niching down to local dental practices, building repeatable onboarding, and investing profits into a small remote team. Key takeaways: specialize, document processes, and reinvest early profits into scalable systems.</p>
+        </article>
+
+        <article id="story-2" class="story">
+            <div class="meta">Growth • 4 min read</div>
+            <h3>Scaling with Remote Teams</h3>
+            <p>Scaling doesn't always require expensive offices. This story covers hiring international talent, async communication, and tooling choices that reduced overhead while improving output.</p>
+        </article>
+
+        <article id="story-3" class="story">
+            <div class="meta">Finance • 5 min read</div>
+            <h3>Bootstrapped and Profitable</h3>
+            <p>A small SaaS launched with a single focused feature, kept burn low, and prioritized customer feedback. Profitability came from focusing on retention and unit economics rather than vanity metrics.</p>
+        </article>
+    </div>
+</body>
+</html>
